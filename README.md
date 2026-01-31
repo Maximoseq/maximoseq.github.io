@@ -22,10 +22,12 @@ A collection of work done either in school or in personal time.
  <img width="640" height="360" alt="Second" src="https://github.com/user-attachments/assets/23005d22-bcd0-4d8e-ac76-a18f0ff27a15" />
 
  ### Looking For Dawgs – Study Group Platform
- - Looking For Dawgs is a client-side study group web application developed to assist UW students in finding collaborative study groups. The application was developed using React, JSX, HTML, and CSS, ensuring a clean component structure, a readable layout, and a good interactive flow. A critical component of the platform is the interactive question-and-answer discussion area where students can contribute questions, answers to questions, and upvote answers that are particularly insightful. This was achieved through the use of Firebase, ensuring that questions and upvotes developed during the local development phase are shared in real-time, promoting engagement while keeping it simple and student-centric.
- - GitHub Repo: https://github.com/Maximoseq/Looking-For-Dawgs
- - First static image (home page)
-   <img width="400" height="200" alt="1st page LFD" src="https://github.com/user-attachments/assets/e898109a-f7aa-423f-a305-f0e8e7726883" />
+- Looking For Dawgs is a client-side study group web application developed to assist UW students in finding collaborative study groups. The application was developed using React, JSX, HTML, and CSS, ensuring a clean component structure, a readable layout, and a good interactive flow. A critical component of the platform is the interactive question-and-answer discussion area where students can contribute questions, answers to questions, and upvote answers that are particularly insightful. This was achieved through the use of Firebase, ensuring that questions and upvotes developed during the local development phase are shared in real-time, promoting engagement while keeping it simple and student-centric.
+- GitHub Repo: https://github.com/Maximoseq/Looking-For-Dawgs
+- First static image (home page)
+   
+  <img width="500" height="250" alt="1st page LFD" src="https://github.com/user-attachments/assets/e898109a-f7aa-423f-a305-f0e8e7726883" />
+
 
 
  
