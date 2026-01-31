@@ -6,7 +6,7 @@ A collection of work done either in school or in personal time.
 ### Real-Time Fisheries Compliance & Alert System
 - This project involved designing a real-time fisheries compliance system to ensure that there is minimal unintentional illegal fishing. As a team, we identified the scope of the fisheries compliance system by designing workflows for fishing vessels and identifying common scenarios for illegal activities, which translated to user stories, epics, and requirements. We used Azure DevOps to manage documentation, backlogs, and objectives, as well as designing workflows, alerts, and notifications.
 - https://dev.azure.com/mbange0367/LYWM/_wiki/wikis/LYWM.wiki/1/Team-Guidelines
-  <img width="800" height="446" alt="Fish" src="https://github.com/user-attachments/assets/849eb0c6-b8a3-46e1-ae53-d01fd1a77a9f" />
+  <img width="640" height="360" alt="Fish" src="https://github.com/user-attachments/assets/849eb0c6-b8a3-46e1-ae53-d01fd1a77a9f" />
 
 ### Gallae - Music app
 - This project required creating a UX/UI-inspired music event discovery tool and community app that allows users to connect through shared interests in concert and festival events. As a team, we undertook research and analysis on the product, creating a user journey through event participation, discovery, and post-event engagement. We worked together on information architecture, UI design, and personalization strategies, ultimately creating a high-fidelity interactive prototype that includes event-based communities, badges such as language and music taste, and safety-conscious moderation.
