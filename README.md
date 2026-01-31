@@ -27,9 +27,13 @@ A collection of work done either in school or in personal time.
 - First static image (home page)
   
   <img width="500" height="250" alt="1st page LFD" src="https://github.com/user-attachments/assets/e898109a-f7aa-423f-a305-f0e8e7726883" />
-- Second static image
+- Second static image (profile page)
   
   <img width="200" height="400" alt="LFD page 2" src="https://github.com/user-attachments/assets/e23d8d0e-f87e-4369-ae27-8413b70a7b8b" />
+- Third static image (question page)
+  
+  <img width="1188" height="1299" alt="3rd page LFD" src="https://github.com/user-attachments/assets/a7dea0b1-532d-4cd7-a108-acfb957845a0" />
+
 
 
 
