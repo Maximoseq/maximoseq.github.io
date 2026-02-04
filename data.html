@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Maximiliano Bange</title>
-
     <link rel="stylesheet" href="style.css" />
   </head>
 
@@ -20,33 +19,32 @@
           />
 
           <div class="header-text">
-            <h1 class="name">Maximiliano Bange</h1>
+            <h1 class="name">Maximiliano Sequoyah Bange</h1>
             <p class="sub">University of Washington</p>
           </div>
         </div>
 
+        <!-- Switch buttons (INSIDE header, same as index.html) -->
+        <nav class="switch">
+          <a class="switch-btn" href="index.html">Design &amp; Product</a>
+          <a class="switch-btn active" href="data.html" aria-current="page">Data &amp; Analysis</a>
+        </nav>
+
         <div class="header-right">
-          <div class="links">
+          <div class="social-links">
             <a class="pill" href="https://github.com/Maximoseq" target="_blank" rel="noreferrer">GitHub</a>
             <a class="pill" href="https://www.linkedin.com/in/mbange3/" target="_blank" rel="noreferrer">LinkedIn</a>
             <a class="pill" href="mailto:mbange@uw.edu">Email</a>
           </div>
 
-          <div class="uw">
+          <div class="school-logo">
             <img
-              class="uw-logo"
               src="images/ischool-logo.png"
               alt="University of Washington Information School logo"
             />
           </div>
         </div>
       </header>
-
-      <!-- Switch buttons -->
-      <nav class="switch">
-        <a class="switch-btn" href="index.html">Design &amp; Product</a>
-        <a class="switch-btn active" href="data.html" aria-current="page">Data &amp; Analysis</a>
-      </nav>
 
       <!-- Intro -->
       <section class="card intro">
@@ -61,9 +59,7 @@
         </p>
 
         <h2 class="section-title">Data &amp; Analysis</h2>
-        <p class="muted">
-          R-based reports focused on communicating patterns clearly. More Python work coming soon (THA2).
-        </p>
+        <p class="muted">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
       </section>
 
       <!-- Data projects -->
@@ -78,7 +74,6 @@
             <p class="tags">Tools: R · tidyverse · lubridate · ggplot</p>
 
             <div class="actions">
-              <!-- Put fremont_bike_analysis.html in the same repo root OR update this link -->
               <a class="pill pill-dark" href="fremont_bike_analysis.html" target="_blank" rel="noreferrer">
                 View Report
               </a>
@@ -86,10 +81,8 @@
           </div>
 
           <div class="project-media">
-            <!-- Optional: if you export a screenshot of the report, put it here.
-                 Otherwise keep this image or swap it later. -->
             <img
-              src="images/Fremont-preview.png"
+              src="images/fremont-bike-graph.png"
               alt="Preview image for Fremont Bridge bike traffic report"
               loading="lazy"
               onerror="this.style.display='none'"
@@ -97,14 +90,12 @@
           </div>
         </article>
 
-        <!-- Placeholder for your next analysis -->
         <article class="project">
           <div class="project-body">
             <h3 class="project-title">More analysis work coming</h3>
             <p class="project-desc">
-              I’m adding additional R reports and a Python assignment (THA2) to show data processing and edge-case handling.
+              I’m adding additional data reports using Python and pandas to show data processing and edge-case handling.
             </p>
-
             <p class="tags">Tools: Python · pandas (soon)</p>
           </div>
         </article>
