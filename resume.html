@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Maximiliano Bange — Resume</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="design-page">
+    <div class="page">
+      <!-- Header -->
+      <header class="header">
+        <div class="header-left">
+          <img
+            class="avatar"
+            src="images/profile-image.jpg"
+            alt="Portrait photo of Maximiliano Bange"
+          />
+
+          <div class="header-text">
+            <h1 class="name">Maximiliano Sequoyah Bange</h1>
+            <p class="sub">University of Washington</p>
+          </div>
+        </div>
+
+        <nav class="switch">
+          <a class="switch-btn" href="index.html">Design &amp; Product</a>
+          <a class="switch-btn" href="data.html">Data &amp; Analysis</a>
+          <a class="switch-btn active" href="resume.html" aria-current="page">Resume</a>
+        </nav>
+
+        <div class="header-right">
+          <div class="social-links">
+            <a class="pill" href="https://github.com/Maximoseq" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="pill" href="https://www.linkedin.com/in/mbange3/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="pill" href="mailto:mbange@uw.edu">Email</a>
+          </div>
+
+          <div class="school-logo">
+            <img src="images/ischool-logo.png" alt="University of Washington Information School logo" />
+          </div>
+        </div>
+      </header>
+
+      <!-- Intro -->
+      <section class="card intro">
+        <p class="lead">Resume</p>
+        <div class="actions" style="margin-top: 14px;">
+          <a class="pill pill-dark" href="resume.pdf" download>Download PDF</a>
+        </div>
+      </section>
+
+      <!-- Resume preview -->
+      <div class="resume-embed">
+        <img
+          src="images/resume.png"
+          alt="Maximiliano Bange Resume"
+          style="width: 100%; border-radius: var(--radius); display: block;"
+        />
+      </div>
+
+      <footer class="footer">
+        <p class="muted">© <span id="year"></span> Maximiliano Bange</p>
+      </footer>
+    </div>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
