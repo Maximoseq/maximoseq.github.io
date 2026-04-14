@@ -9,9 +9,12 @@
   </head>
 
   <body class="design-page">
+    <!-- Scroll progress bar -->
+    <div class="scroll-progress" aria-hidden="true"></div>
+
     <div class="page">
       <!-- Header -->
-      <header class="header">
+      <header class="header reveal">
         <div class="header-left">
           <img
             class="avatar"
@@ -46,7 +49,18 @@
       </header>
 
       <!-- Intro -->
-      <section class="card intro">
+      <section class="card intro reveal reveal-delay-1">
+        <div class="hero-blob" aria-hidden="true"></div>
+
+        <p class="typed-line">
+          <span class="typed-label">I work on</span>
+          <span
+            class="typed"
+            data-typed="product design | UX research | data storytelling | systems thinking"
+            aria-live="polite"
+          >product design</span>
+        </p>
+
         <p class="lead">
           Hi, I'm Maximiliano Bange, an Informatics student at the University of Washington specializing
            in data science and product and project management.
@@ -59,15 +73,29 @@
         <h2 class="section-title">Design &amp; Product</h2>
         <p class="muted">
           I focus on understanding how people interact with systems and where those systems break down.
-           This section of my work draws from product design, UX, and systems thinking, with an emphasis on real-world 
+           This section of my work draws from product design, UX, and systems thinking, with an emphasis on real-world
            constraints, tradeoffs, and data-informed decisions.
         </p>
       </section>
 
+      <!-- Filter bar -->
+      <div class="filter-bar reveal reveal-delay-2" role="group" aria-label="Filter projects by focus">
+        <span class="filter-label">Filter</span>
+        <button type="button" class="filter-btn is-active" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" class="filter-btn" data-filter="design" aria-pressed="false">Design</button>
+        <button type="button" class="filter-btn" data-filter="ux" aria-pressed="false">UX Research</button>
+        <button type="button" class="filter-btn" data-filter="frontend" aria-pressed="false">Frontend</button>
+        <button type="button" class="filter-btn" data-filter="systems" aria-pressed="false">Systems</button>
+      </div>
+
       <!-- Projects -->
       <main class="stack">
         <!-- Fisheries -->
-        <article class="project">
+        <article
+          class="project reveal reveal-delay-1"
+          data-tags="design systems ux"
+          data-details="Scoped end-to-end with a team: identified illegal-fishing scenarios, translated them into user stories, epics and requirements, and designed vessel workflows with real-time alerts and notifications. Managed backlog and documentation in Azure DevOps."
+        >
           <div class="project-body">
             <h3 class="project-title">Real-Time Fisheries Compliance &amp; Alert System</h3>
             <p class="project-desc">
@@ -85,6 +113,7 @@
               >
                 Wiki
               </a>
+              <button type="button" class="project-open" aria-label="Open details for Real-Time Fisheries Compliance and Alert System">Details</button>
             </div>
           </div>
 
@@ -98,7 +127,11 @@
         </article>
 
         <!-- Community Garden -->
-        <article class="project">
+        <article
+          class="project reveal reveal-delay-2"
+          data-tags="design frontend ux"
+          data-details="Team-built web platform with a focus on accessibility (WCAG), clear information architecture, and community-centered content. Delivered as a live production site."
+        >
         <div class="project-body">
           <h3 class="project-title">Seattle Community Garden Connection</h3>
           <p class="project-desc">
@@ -124,6 +157,7 @@
             >
               Repo
             </a>
+            <button type="button" class="project-open" aria-label="Open details for Seattle Community Garden Connection">Details</button>
           </div>
         </div>
 
@@ -137,7 +171,11 @@
       </article>
 
         <!-- Looking For Dawgs -->
-        <article class="project">
+        <article
+          class="project reveal reveal-delay-3"
+          data-tags="frontend design"
+          data-details="React + Firebase study group platform for UW students. Real-time question and answer board with upvote-weighted responses. Clean component structure across home, profile, and question pages."
+        >
           <div class="project-body">
             <h3 class="project-title">Looking For Dawgs</h3>
             <p class="project-desc">
@@ -155,6 +193,7 @@
               >
                 Repo
               </a>
+              <button type="button" class="project-open" aria-label="Open details for Looking For Dawgs">Details</button>
             </div>
           </div>
 
@@ -168,7 +207,11 @@
         </article>
 
         <!-- Gallae -->
-        <article class="project">
+        <article
+          class="project reveal reveal-delay-4"
+          data-tags="design ux"
+          data-details="High-fidelity Figma prototype for a music event discovery and community app. Covered research, user journey, information architecture, personalization strategy, event-based communities, badges, and safety-conscious moderation."
+        >
           <div class="project-body">
             <h3 class="project-title">Gallae (Figma)</h3>
             <p class="project-desc">
@@ -195,6 +238,7 @@
               >
                 Process
               </a>
+              <button type="button" class="project-open" aria-label="Open details for Gallae">Details</button>
             </div>
           </div>
 
@@ -208,7 +252,11 @@
         </article>
 
         <!-- SecondStep -->
-        <article class="project">
+        <article
+          class="project reveal reveal-delay-5"
+          data-tags="design ux systems"
+          data-details="DubHacks prototype for a community resource hub. Designed for simplicity, visual guidance, and low-barrier access. Informed by interviews with a pro bono legal volunteer supporting domestic-violence cases."
+        >
           <div class="project-body">
             <h3 class="project-title">SecondStep (DubHacks Prototype)</h3>
             <p class="project-desc">
@@ -235,6 +283,7 @@
               >
                 Devpost
               </a>
+              <button type="button" class="project-open" aria-label="Open details for SecondStep">Details</button>
             </div>
           </div>
 
@@ -253,8 +302,26 @@
       </footer>
     </div>
 
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
+    <!-- Back-to-top button -->
+    <button type="button" class="to-top" aria-label="Back to top" title="Back to top">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 19V5"></path>
+        <path d="M5 12l7-7 7 7"></path>
+      </svg>
+    </button>
+
+    <!-- Project modal -->
+    <div class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-backdrop"></div>
+      <div class="modal-panel">
+        <button type="button" class="modal-close" aria-label="Close details">×</button>
+        <h3 class="modal-title" id="modal-title"></h3>
+        <div class="modal-media"></div>
+        <div class="modal-body"></div>
+        <div class="modal-actions"></div>
+      </div>
+    </div>
+
+    <script src="script.js" defer></script>
   </body>
 </html>

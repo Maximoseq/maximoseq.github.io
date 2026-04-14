@@ -8,9 +8,12 @@
   </head>
 
   <body class="design-page">
+    <!-- Scroll progress bar -->
+    <div class="scroll-progress" aria-hidden="true"></div>
+
     <div class="page">
       <!-- Header -->
-      <header class="header">
+      <header class="header reveal">
         <div class="header-left">
           <img
             class="avatar"
@@ -44,15 +47,16 @@
       </header>
 
       <!-- Intro -->
-      <section class="card intro">
+      <section class="card intro reveal reveal-delay-1">
+        <div class="hero-blob" aria-hidden="true"></div>
         <p class="lead">Resume</p>
         <div class="actions" style="margin-top: 14px;">
-          <a class="pill pill-dark" href="resume.pdf" download>Download PDF</a>
+          <a class="pill pill-dark" href="maximiliano-bange-resume.pdf" download>Download PDF</a>
         </div>
       </section>
 
       <!-- Resume preview -->
-      <div class="resume-embed">
+      <div class="resume-embed reveal reveal-delay-2">
         <img
           src="images/resume.png"
           alt="Maximiliano Bange Resume"
@@ -65,8 +69,14 @@
       </footer>
     </div>
 
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
+    <!-- Back-to-top button -->
+    <button type="button" class="to-top" aria-label="Back to top" title="Back to top">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 19V5"></path>
+        <path d="M5 12l7-7 7 7"></path>
+      </svg>
+    </button>
+
+    <script src="script.js" defer></script>
   </body>
 </html>

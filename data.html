@@ -8,9 +8,12 @@
   </head>
 
   <body class="data-page">
+    <!-- Scroll progress bar -->
+    <div class="scroll-progress" aria-hidden="true"></div>
+
     <div class="page">
       <!-- Header -->
-      <header class="header">
+      <header class="header reveal">
         <div class="header-left">
           <img
             class="avatar"
@@ -47,11 +50,22 @@
       </header>
 
       <!-- Intro -->
-      <section class="card intro">
+      <section class="card intro reveal reveal-delay-1">
+        <div class="hero-blob" aria-hidden="true"></div>
+
+        <p class="typed-line">
+          <span class="typed-label">Tools</span>
+          <span
+            class="typed"
+            data-typed="R · tidyverse · ggplot | Python · pandas | exploratory analysis | data storytelling"
+            aria-live="polite"
+          >R · tidyverse · ggplot</span>
+        </p>
+
         <p class="lead">
-          I primarily use R for data visualization and exploratory analysis, and 
-          I'm currently using Python more in my coursework to expand how I work with and visualize data. 
-          I'm especially interested in using visualization to make patterns and system behavior easier to see and 
+          I primarily use R for data visualization and exploratory analysis, and
+          I'm currently using Python more in my coursework to expand how I work with and visualize data.
+          I'm especially interested in using visualization to make patterns and system behavior easier to see and
           understand.
         </p>
 
@@ -61,15 +75,19 @@
 
         <h2 class="section-title">Data &amp; Analysis</h2>
         <p class="muted">
-          I use data to explain what's happening, not just what we assume is happening. This portion 
-          of my work focuses on visualization and data storytelling, with an emphasis on clean analysis, 
+          I use data to explain what's happening, not just what we assume is happening. This portion
+          of my work focuses on visualization and data storytelling, with an emphasis on clean analysis,
           readable visuals, and straightforward interpretation.
         </p>
       </section>
 
       <!-- Data projects -->
       <main class="stack">
-        <article class="project">
+        <article
+          class="project reveal reveal-delay-1"
+          data-tags="r viz"
+          data-details="Explored time-series patterns on Seattle Open Data's Fremont Bridge bike counts. Compared weekday vs. weekend behavior, seasonal shifts, and commute-hour spikes. Built with tidyverse + lubridate + ggplot."
+        >
           <div class="project-body">
             <h3 class="project-title">Bicycle Traffic Patterns on Seattle's Fremont Bridge</h3>
             <p class="project-desc">
@@ -82,6 +100,7 @@
               <a class="pill pill-dark" href="/data/fremont_bike_analysis.html" target="_blank" rel="noreferrer">
                 View Report
               </a>
+              <button type="button" class="project-open" aria-label="Open details for Fremont Bridge bike analysis">Details</button>
             </div>
           </div>
 
@@ -95,7 +114,7 @@
           </div>
         </article>
 
-        <article class="project">
+        <article class="project reveal reveal-delay-2">
           <div class="project-body">
             <h3 class="project-title">More analysis work coming</h3>
             <p class="project-desc">
@@ -111,8 +130,26 @@
       </footer>
     </div>
 
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
+    <!-- Back-to-top button -->
+    <button type="button" class="to-top" aria-label="Back to top" title="Back to top">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 19V5"></path>
+        <path d="M5 12l7-7 7 7"></path>
+      </svg>
+    </button>
+
+    <!-- Project modal -->
+    <div class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-backdrop"></div>
+      <div class="modal-panel">
+        <button type="button" class="modal-close" aria-label="Close details">×</button>
+        <h3 class="modal-title" id="modal-title"></h3>
+        <div class="modal-media"></div>
+        <div class="modal-body"></div>
+        <div class="modal-actions"></div>
+      </div>
+    </div>
+
+    <script src="script.js" defer></script>
   </body>
 </html>
