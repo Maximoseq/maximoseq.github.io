@@ -3,278 +3,474 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Maximiliano Bange</title>
+    <title>Maximiliano Bange — Informatics, product &amp; data</title>
+    <meta
+      name="description"
+      content="Portfolio of Maximiliano Bange, an Informatics student at the University of Washington Information School working across product design, web development, and data analysis."
+    />
+    <meta name="theme-color" content="#f5f2eb" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234b2e83'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='30' text-anchor='middle' fill='%23f5f2eb'%3EMB%3C/text%3E%3C/svg%3E"
+    />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
 
-  <body class="design-page">
-    <div class="page">
-      <!-- Header -->
-      <header class="header">
-        <div class="header-left">
-          <img
-            class="avatar"
-            src="images/profile-image.jpg"
-            alt="Portrait photo of Maximiliano Bange"
-          />
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
 
-          <div class="header-text">
-            <h1 class="name">Maximiliano Sequoyah Bange</h1>
-            <p class="sub">University of Washington</p>
-          </div>
-        </div>
-
-        <nav class="switch">
-            <a class="switch-btn active" href="index.html" aria-current="page">Design &amp; Product</a>
-            <a class="switch-btn" href="data.html">Data &amp; Analysis</a>
-        </nav>
-
-        <div class="header-right">
-            <div class="social-links">
-                <a class="pill" href="https://github.com/Maximoseq" target="_blank" rel="noreferrer">GitHub</a>
-                <a class="pill" href="https://www.linkedin.com/in/mbange3/" target="_blank" rel="noreferrer">LinkedIn</a>
-                <a class="pill" href="mailto:mbange@uw.edu">Email</a>
-            </div>
-
-        <div class="school-logo">
-            <img src="images/ischool-logo.png" alt="University of Washington Information School logo">
-        </div>
-    </div>
-
-      </header>
-
-      <!-- Intro -->
-      <section class="card intro">
-        <p class="lead">
-          Hi, I'm Maximiliano Bange, an Informatics student at the University of Washington specializing
-           in data science and product and project management.
-        </p>
-
-        <p class="contact">
-          UW: <a href="mailto:mbange@uw.edu">mbange@uw.edu</a>
-        </p>
-
-        <h2 class="section-title">Design &amp; Product</h2>
-        <p class="muted">
-          I focus on understanding how people interact with systems and where those systems break down.
-           This section of my work draws from product design, UX, and systems thinking, with an emphasis on real-world 
-           constraints, tradeoffs, and data-informed decisions.
-        </p>
-      </section>
-
-      <!-- Projects -->
-      <main class="stack">
-        <!-- Fisheries -->
-        <article class="project">
-          <div class="project-body">
-            <h3 class="project-title">Real-Time Fisheries Compliance &amp; Alert System</h3>
-            <p class="project-desc">
-              Workflow and alert design to reduce unintentional illegal fishing through real-time guidance.
-            </p>
-
-            <p class="tags">Focus: problem framing · workflow logic · alerts · operational thinking</p>
-
-            <div class="actions">
-              <a
-                class="pill pill-dark"
-                href="https://dev.azure.com/mbange0367/LYWM/_wiki/wikis/LYWM.wiki/1/Team-Guidelines"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Wiki
-              </a>
-            </div>
-          </div>
-
-          <div class="project-media">
+    <div class="shell">
+      <!-- Rail: identity + navigation -->
+      <aside class="rail">
+        <div class="rail-inner">
+          <div class="identity">
             <img
-              src="images/Fish-proj-wireframe.png"
-              alt="Workflow diagram for the real-time fisheries compliance system"
-              loading="lazy"
+              class="avatar"
+              src="images/profile-image.jpg"
+              width="478"
+              height="488"
+              alt="Portrait photo of Maximiliano Bange"
             />
+            <p class="brand">Maximiliano Sequoyah Bange</p>
+            <p class="affil">Informatics student<br />University of Washington Information School</p>
           </div>
-        </article>
 
-        <!-- Community Garden -->
-        <article class="project">
-        <div class="project-body">
-          <h3 class="project-title">Seattle Community Garden Connection</h3>
-          <p class="project-desc">
-            A web platform connecting Seattle residents to local community gardens, built as a team project with a focus on accessibility and clear information architecture.
+          <nav class="toc" aria-label="Page sections">
+            <ul class="toc-top">
+              <li>
+                <a href="#work">Work</a>
+                <ol class="toc-work" id="toc-work">
+                  <li data-cats="design build"><a href="#garden"><span class="n">01</span>Community Garden</a></li>
+                  <li data-cats="data"><a href="#fremont"><span class="n">02</span>Fremont Bridge Bikes</a></li>
+                  <li data-cats="design"><a href="#fisheries"><span class="n">03</span>Fisheries Alerts</a></li>
+                  <li data-cats="build"><a href="#pixelboard"><span class="n">04</span>PixelBoard</a></li>
+                  <li data-cats="design"><a href="#gallae"><span class="n">05</span>Gallae</a></li>
+                  <li data-cats="build"><a href="#lfd"><span class="n">06</span>Looking For Dawgs</a></li>
+                  <li data-cats="design"><a href="#secondstep"><span class="n">07</span>SecondStep</a></li>
+                </ol>
+              </li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+
+          <ul class="rail-links">
+            <li><a href="https://github.com/Maximoseq" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://www.linkedin.com/in/mbange3/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a></li>
+            <li><a href="mailto:mbange@uw.edu">Email</a></li>
+          </ul>
+        </div>
+      </aside>
+
+      <main id="main" class="main">
+        <!-- Intro -->
+        <section class="hero" aria-labelledby="hero-title">
+          <p class="eyebrow">Product · Design · Data</p>
+          <h1 id="hero-title">I study how people use systems, and where those systems break down.</h1>
+          <p class="hero-sub">
+            I'm Maximiliano Bange, an Informatics student at the University of Washington Information School,
+            specializing in data science and in product and project management. My work draws on UX, systems thinking,
+            and data analysis, with an emphasis on real-world constraints, tradeoffs, and decisions informed by
+            evidence.
           </p>
+          <p class="hero-actions">
+            <a class="btn btn-primary" href="#work">See the work</a>
+            <a class="btn" href="mailto:mbange@uw.edu">mbange@uw.edu</a>
+          </p>
+        </section>
 
-          <p class="tags">Focus: information architecture · accessibility · community-centered design</p>
+        <!-- Work -->
+        <section id="work" class="work" aria-labelledby="work-title">
+          <header class="section-head">
+            <h2 id="work-title">Selected work</h2>
+            <p class="count" id="count" aria-live="polite">7 projects</p>
+          </header>
 
-          <div class="actions">
-            <a
-              class="pill pill-dark"
-              href="https://save-the-city-906f2.web.app/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Live Site
-            </a>
-            <a
-              class="pill"
-              href="https://github.com/UW-INFO442-WI26/save-the-city"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Repo
-            </a>
+          <div class="filters" role="group" aria-label="Filter projects by type">
+            <button type="button" class="chip-btn" data-filter="all" aria-pressed="true">All</button>
+            <button type="button" class="chip-btn" data-filter="design" aria-pressed="false">Design &amp; Product</button>
+            <button type="button" class="chip-btn" data-filter="build" aria-pressed="false">Web development</button>
+            <button type="button" class="chip-btn" data-filter="data" aria-pressed="false">Data &amp; Analysis</button>
           </div>
-        </div>
 
-        <div class="project-media">
-          <img
-            src="images/save-the-city.png"
-            alt="Seattle Community Garden Connection website screenshot"
-            loading="lazy"
-          />
-        </div>
-      </article>
+          <ol class="cases" id="cases">
+            <!-- 01 · Community Garden -->
+            <li class="case" id="garden" data-cats="design build">
+              <article>
+                <a
+                  class="case-media"
+                  href="https://save-the-city-906f2.web.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  tabindex="-1"
+                  aria-hidden="true"
+                >
+                  <img
+                    class="pos-top"
+                    src="images/save-the-city.png"
+                    width="1698"
+                    height="1098"
+                    alt="Seattle Community Garden Connection website screenshot"
+                  />
+                </a>
+                <div class="case-body">
+                  <div class="case-head">
+                    <p class="case-meta"><span class="n">01</span> Design &amp; Product · Web development</p>
+                    <h3 class="case-title">Seattle Community Garden Connection</h3>
+                  </div>
+                  <div class="case-text">
+                    <p class="case-desc">
+                      A web platform connecting Seattle residents to local community gardens, built as a team project
+                      with a focus on accessibility and clear information architecture.
+                    </p>
+                    <ul class="chips" aria-label="Focus">
+                      <li>Information architecture</li>
+                      <li>Accessibility</li>
+                      <li>Community-centered design</li>
+                    </ul>
+                    <p class="case-links">
+                      <a class="btn btn-primary btn-sm" href="https://save-the-city-906f2.web.app/" target="_blank" rel="noopener noreferrer">Live site <span aria-hidden="true">↗</span></a>
+                      <a class="btn btn-sm" href="https://github.com/UW-INFO442-WI26/save-the-city" target="_blank" rel="noopener noreferrer">Repo <span aria-hidden="true">↗</span></a>
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </li>
 
-      <!-- PixelBoard -->
-        <article class="project">
-          <div class="project-body">
-            <h3 class="project-title">PixelBoard</h3>
-            <p class="project-desc">
-              Community gallery for browsing and sharing pixel art, built with a 5-person team. Built the profile page (HTML, CSS, React) with customizable, interactive elements, and the site navigation bar.
-            </p>
+            <!-- 02 · Fremont Bridge -->
+            <li class="case" id="fremont" data-cats="data">
+              <article>
+                <a class="case-media" href="data/fremont_bike_analysis.html" tabindex="-1" aria-hidden="true">
+                  <img
+                    class="fit-contain"
+                    src="images/fremont-bike-graph.png"
+                    width="1147"
+                    height="679"
+                    loading="lazy"
+                    alt="Preview image for Fremont Bridge bike traffic report"
+                  />
+                </a>
+                <div class="case-body">
+                  <div class="case-head">
+                    <p class="case-meta"><span class="n">02</span> Data &amp; Analysis</p>
+                    <h3 class="case-title">Bicycle Traffic Patterns on Seattle's Fremont Bridge</h3>
+                  </div>
+                  <div class="case-text">
+                    <p class="case-desc">
+                      Trends over time with weekday vs. weekend patterns using Seattle Open Data.
+                    </p>
+                    <ul class="chips" aria-label="Tools">
+                      <li>R</li>
+                      <li>tidyverse</li>
+                      <li>lubridate</li>
+                      <li>ggplot</li>
+                    </ul>
+                    <p class="case-links">
+                      <a class="btn btn-primary btn-sm" href="data/fremont_bike_analysis.html" target="_blank" rel="noopener noreferrer">View report <span aria-hidden="true">↗</span></a>
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </li>
 
-            <p class="tags">Focus: React components · CSS styling · UI customization · navigation</p>
+            <!-- 03 · Fisheries -->
+            <li class="case" id="fisheries" data-cats="design">
+              <article>
+                <a
+                  class="case-media"
+                  href="https://dev.azure.com/mbange0367/LYWM/_wiki/wikis/LYWM.wiki/1/Team-Guidelines"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  tabindex="-1"
+                  aria-hidden="true"
+                >
+                  <img
+                    class="pos-top-left"
+                    src="images/Fish-proj-wireframe.png"
+                    width="1600"
+                    height="892"
+                    loading="lazy"
+                    alt="Workflow diagram for the real-time fisheries compliance system"
+                  />
+                </a>
+                <div class="case-body">
+                  <div class="case-head">
+                    <p class="case-meta"><span class="n">03</span> Design &amp; Product</p>
+                    <h3 class="case-title">Real-Time Fisheries Compliance &amp; Alert System</h3>
+                  </div>
+                  <div class="case-text">
+                    <p class="case-desc">
+                      Workflow and alert design to reduce unintentional illegal fishing through real-time guidance.
+                    </p>
+                    <ul class="chips" aria-label="Focus">
+                      <li>Problem framing</li>
+                      <li>Workflow logic</li>
+                      <li>Alerts</li>
+                      <li>Operational thinking</li>
+                    </ul>
+                    <p class="case-links">
+                      <a class="btn btn-primary btn-sm" href="https://dev.azure.com/mbange0367/LYWM/_wiki/wikis/LYWM.wiki/1/Team-Guidelines" target="_blank" rel="noopener noreferrer">Wiki <span aria-hidden="true">↗</span></a>
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </li>
 
-            <div class="actions">
-              <a class="pill pill-dark" href="https://pixelboard-sp26.web.app/home" target="_blank" rel="noreferrer">Live Site</a>
-              <a class="pill" href="https://github.com/info340-sp26a/project-crystaltran12" target="_blank" rel="noreferrer">Repo</a>
+            <!-- 04 · PixelBoard -->
+            <li class="case" id="pixelboard" data-cats="build">
+              <article>
+                <a
+                  class="case-media"
+                  href="https://pixelboard-sp26.web.app/home"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  tabindex="-1"
+                  aria-hidden="true"
+                >
+                  <img
+                    src="images/PixelBoard.png"
+                    width="1900"
+                    height="906"
+                    loading="lazy"
+                    alt="PixelBoard profile page preview"
+                  />
+                </a>
+                <div class="case-body">
+                  <div class="case-head">
+                    <p class="case-meta"><span class="n">04</span> Web development</p>
+                    <h3 class="case-title">PixelBoard</h3>
+                  </div>
+                  <div class="case-text">
+                    <p class="case-desc">
+                      Community gallery for browsing and sharing pixel art, built with a 5-person team. Built the
+                      profile page (HTML, CSS, React) with customizable, interactive elements, and the site
+                      navigation bar.
+                    </p>
+                    <ul class="chips" aria-label="Focus">
+                      <li>React components</li>
+                      <li>CSS styling</li>
+                      <li>UI customization</li>
+                      <li>Navigation</li>
+                    </ul>
+                    <p class="case-links">
+                      <a class="btn btn-primary btn-sm" href="https://pixelboard-sp26.web.app/home" target="_blank" rel="noopener noreferrer">Live site <span aria-hidden="true">↗</span></a>
+                      <a class="btn btn-sm" href="https://github.com/info340-sp26a/project-crystaltran12" target="_blank" rel="noopener noreferrer">Repo <span aria-hidden="true">↗</span></a>
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </li>
+
+            <!-- 05 · Gallae -->
+            <li class="case" id="gallae" data-cats="design">
+              <article>
+                <a
+                  class="case-media"
+                  href="https://www.figma.com/proto/GNGMiDMHpJ5oYPvr3YZ28P/Design-Space-for-Ewha-x-UW-Hackathon?node-id=204-5406&t=S9YlSDPKHNVmBXmr-1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  tabindex="-1"
+                  aria-hidden="true"
+                >
+                  <img
+                    src="images/Gallae.png"
+                    width="1920"
+                    height="1080"
+                    loading="lazy"
+                    alt="Gallae prototype UI preview"
+                  />
+                </a>
+                <div class="case-body">
+                  <div class="case-head">
+                    <p class="case-meta"><span class="n">05</span> Design &amp; Product</p>
+                    <h3 class="case-title">Gallae (Figma)</h3>
+                  </div>
+                  <div class="case-text">
+                    <p class="case-desc">Music event discovery experience prototype built in Figma.</p>
+                    <ul class="chips" aria-label="Focus">
+                      <li>UX research</li>
+                      <li>Prototype logic</li>
+                      <li>Interaction flows</li>
+                    </ul>
+                    <p class="case-links">
+                      <a class="btn btn-primary btn-sm" href="https://www.figma.com/proto/GNGMiDMHpJ5oYPvr3YZ28P/Design-Space-for-Ewha-x-UW-Hackathon?node-id=204-5406&t=S9YlSDPKHNVmBXmr-1" target="_blank" rel="noopener noreferrer">Prototype <span aria-hidden="true">↗</span></a>
+                      <a class="btn btn-sm" href="https://www.figma.com/design/GNGMiDMHpJ5oYPvr3YZ28P/Design-Space-for-Ewha-x-UW-Hackathon?node-id=0-1&t=vAwOf0Djzc5362WL-1" target="_blank" rel="noopener noreferrer">Process <span aria-hidden="true">↗</span></a>
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </li>
+
+            <!-- 06 · Looking For Dawgs -->
+            <li class="case" id="lfd" data-cats="build">
+              <article>
+                <a
+                  class="case-media"
+                  href="https://github.com/Maximoseq/Looking-For-Dawgs"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  tabindex="-1"
+                  aria-hidden="true"
+                >
+                  <img
+                    class="pos-top"
+                    src="images/LFD-home.png"
+                    width="1717"
+                    height="971"
+                    loading="lazy"
+                    alt="Looking For Dawgs home page screenshot"
+                  />
+                </a>
+                <div class="case-body">
+                  <div class="case-head">
+                    <p class="case-meta"><span class="n">06</span> Web development</p>
+                    <h3 class="case-title">Looking For Dawgs</h3>
+                  </div>
+                  <div class="case-text">
+                    <p class="case-desc">React + Firebase study group platform with real-time Q&amp;A and upvotes.</p>
+                    <ul class="chips" aria-label="Focus">
+                      <li>Real-time features</li>
+                      <li>UI logic</li>
+                      <li>User flows</li>
+                    </ul>
+                    <p class="case-links">
+                      <a class="btn btn-primary btn-sm" href="https://github.com/Maximoseq/Looking-For-Dawgs" target="_blank" rel="noopener noreferrer">Repo <span aria-hidden="true">↗</span></a>
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </li>
+
+            <!-- 07 · SecondStep -->
+            <li class="case" id="secondstep" data-cats="design">
+              <article>
+                <a
+                  class="case-media"
+                  href="https://devpost.com/software/map-based-selling-app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  tabindex="-1"
+                  aria-hidden="true"
+                >
+                  <img
+                    src="images/Secondstep.png"
+                    width="2335"
+                    height="1135"
+                    loading="lazy"
+                    alt="SecondStep prototype screen preview"
+                  />
+                </a>
+                <div class="case-body">
+                  <div class="case-head">
+                    <p class="case-meta"><span class="n">07</span> Design &amp; Product</p>
+                    <h3 class="case-title">SecondStep (DubHacks Prototype)</h3>
+                  </div>
+                  <div class="case-text">
+                    <p class="case-desc">
+                      Community resource hub prototype designed for low-barrier access to food, shelter, and legal
+                      support.
+                    </p>
+                    <ul class="chips" aria-label="Focus">
+                      <li>Accessibility</li>
+                      <li>Clarity</li>
+                      <li>User research</li>
+                    </ul>
+                    <p class="case-links">
+                      <a class="btn btn-primary btn-sm" href="https://github.com/paingkalay7324/dubHacks25" target="_blank" rel="noopener noreferrer">Repo <span aria-hidden="true">↗</span></a>
+                      <a class="btn btn-sm" href="https://devpost.com/software/map-based-selling-app" target="_blank" rel="noopener noreferrer">Devpost <span aria-hidden="true">↗</span></a>
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </li>
+
+            <!-- In progress -->
+            <li class="case case-next" id="next" data-cats="data">
+              <div class="case-body">
+                <div class="case-head">
+                  <p class="case-meta">In progress</p>
+                  <h3 class="case-title">More analysis work coming</h3>
+                </div>
+                <div class="case-text">
+                  <p class="case-desc">
+                    I'm adding additional data reports using Python and pandas to show data processing and edge-case
+                    handling.
+                  </p>
+                  <ul class="chips" aria-label="Tools">
+                    <li>Python</li>
+                    <li>pandas</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="about" aria-labelledby="about-title">
+          <header class="section-head">
+            <h2 id="about-title">How I work</h2>
+          </header>
+
+          <div class="about-grid">
+            <div>
+              <h3 class="about-label">Design &amp; Product</h3>
+              <p>
+                I focus on understanding how people interact with systems and where those systems break down. That
+                means product design, UX, and systems thinking, with an emphasis on real-world constraints, tradeoffs,
+                and data-informed decisions.
+              </p>
+            </div>
+            <div>
+              <h3 class="about-label">Data &amp; Analysis</h3>
+              <p>
+                I use data to explain what's happening, not just what we assume is happening. I primarily use R for
+                visualization and exploratory analysis, and I'm using Python more in my coursework to expand how I work
+                with and visualize data, aiming for clean analysis, readable visuals, and straightforward
+                interpretation.
+              </p>
             </div>
           </div>
 
-          <div class="project-media">
-            <img src="images/PixelBoard.png" alt="PixelBoard profile page preview" loading="lazy" />
-          </div>
-        </article>
-
-        <!-- Looking For Dawgs -->
-        <article class="project">
-          <div class="project-body">
-            <h3 class="project-title">Looking For Dawgs</h3>
-            <p class="project-desc">
-              React + Firebase study group platform with real-time Q&amp;A and upvotes.
-            </p>
-
-            <p class="tags">Focus: real-time features · UI logic · user flows</p>
-
-            <div class="actions">
-              <a
-                class="pill pill-dark"
-                href="https://github.com/Maximoseq/Looking-For-Dawgs"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Repo
-              </a>
+          <dl class="toolkit">
+            <div>
+              <dt>Data</dt>
+              <dd>R (tidyverse, lubridate, ggplot) · Python (pandas)</dd>
             </div>
-          </div>
-
-          <div class="project-media">
-            <img
-              src="images/LFD-home.png"
-              alt="Looking For Dawgs home page screenshot"
-              loading="lazy"
-            />
-          </div>
-        </article>
-
-        <!-- Gallae -->
-        <article class="project">
-          <div class="project-body">
-            <h3 class="project-title">Gallae (Figma)</h3>
-            <p class="project-desc">
-              Music event discovery experience prototype built in Figma.
-            </p>
-
-            <p class="tags">Focus: UX research · prototype logic · interaction flows</p>
-
-            <div class="actions">
-              <a
-                class="pill pill-dark"
-                href="https://www.figma.com/proto/GNGMiDMHpJ5oYPvr3YZ28P/Design-Space-for-Ewha-x-UW-Hackathon?node-id=204-5406&t=S9YlSDPKHNVmBXmr-1"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Prototype
-              </a>
-
-              <a
-                class="pill"
-                href="https://www.figma.com/design/GNGMiDMHpJ5oYPvr3YZ28P/Design-Space-for-Ewha-x-UW-Hackathon?node-id=0-1&t=vAwOf0Djzc5362WL-1"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Process
-              </a>
+            <div>
+              <dt>Build</dt>
+              <dd>React · Firebase · HTML &amp; CSS</dd>
             </div>
-          </div>
-
-          <div class="project-media">
-            <img
-              src="images/Gallae.png"
-              alt="Gallae prototype UI preview"
-              loading="lazy"
-            />
-          </div>
-        </article>
-
-        <!-- SecondStep -->
-        <article class="project">
-          <div class="project-body">
-            <h3 class="project-title">SecondStep (DubHacks Prototype)</h3>
-            <p class="project-desc">
-              Community resource hub prototype designed for low-barrier access to food, shelter, and legal support.
-            </p>
-
-            <p class="tags">Focus: accessibility · clarity · user research</p>
-
-            <div class="actions">
-              <a
-                class="pill pill-dark"
-                href="https://github.com/paingkalay7324/dubHacks25"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Repo
-              </a>
-
-              <a
-                class="pill"
-                href="https://devpost.com/software/map-based-selling-app"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Devpost
-              </a>
+            <div>
+              <dt>Design &amp; PM</dt>
+              <dd>Figma · Azure DevOps</dd>
             </div>
-          </div>
+          </dl>
+        </section>
 
-          <div class="project-media">
-            <img
-              src="images/Secondstep.png"
-              alt="SecondStep prototype screen preview"
-              loading="lazy"
-            />
-          </div>
-        </article>
+        <!-- Contact -->
+        <section id="contact" class="contact" aria-labelledby="contact-title">
+          <h2 id="contact-title" class="eyebrow">Contact</h2>
+          <a class="contact-mail" href="mailto:mbange@uw.edu">mbange@uw.edu</a>
+          <ul class="contact-links">
+            <li><a href="https://github.com/Maximoseq" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://www.linkedin.com/in/mbange3/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a></li>
+          </ul>
+        </section>
+
+        <footer class="footer">
+          <p>© <span id="year">2026</span> Maximiliano Bange · University of Washington Information School</p>
+        </footer>
       </main>
-
-      <footer class="footer">
-        <p class="muted">© <span id="year"></span> Maximiliano Bange</p>
-      </footer>
     </div>
 
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
