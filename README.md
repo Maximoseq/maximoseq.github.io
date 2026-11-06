@@ -1,4 +1,4 @@
-# Sequoyah-portfolio
+# Max Bange — Portfolio
 A collection of work done either in school or in personal time.
 
 ## Selected Works
