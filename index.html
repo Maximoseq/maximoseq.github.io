@@ -4,223 +4,278 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Max Bange</title>
-    <meta
-      name="description"
-      content="Max Bange is an Informatics student at the University of Washington. Projects in data analysis, UX research, and web development."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;700&display=swap" rel="stylesheet" />
+    <meta name="description" content="Max Bange is an Informatics student at the University of Washington. Projects in product, project management, and data analysis." />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" href="favicon-32.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="preload" href="fonts/libre-franklin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
-    <header>
-      <img src="images/profile-image.jpg" width="478" height="488" alt="Portrait photo of Max Bange" />
-      <div>
-        <h1>Max Bange</h1>
-        <p>Informatics student at the University of Washington</p>
-        <nav>
-          <a href="#projects">Projects</a>
-          <a href="#skills">Skills</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
-        </nav>
+<div class="wrap">
+  <header class="top">
+    <img class="photo" src="images/max-headshot.jpg" alt="Max Bange" width="400" height="400">
+    <div>
+      <h1>Max Bange</h1>
+      <p class="tagline">Informatics student at the University of Washington</p>
+      <nav aria-label="Main">
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Leadership</a>
+        <a href="#skills">Skills</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <p class="intro">
+      I'm studying Informatics with a concentration in data science, and I graduate in summer 2027.
+      I'm working toward product and project management roles. I like finding out how people use a
+      system, where it breaks down, and what a team should build next.
+    </p>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="school">
+        <h3>University of Washington, Information School</h3>
+        <p class="meta">B.S. in Informatics, concentration in Data Science. Graduating summer 2027.</p>
+        <dl class="facts">
+          <dt>Honors</dt>
+          <dd>UW Merit Scholar, Dean's List (multiple quarters)</dd>
+          <dt>Coursework</dt>
+          <dd>
+            <ul>
+              <li>Core Methods in Data Science (INFO 370)</li>
+              <li>Databases and Data Modeling/SQL (INFO 330)</li>
+              <li>Intro to Information Architecture (INFO 331)</li>
+              <li>Client-Side Development (INFO 340)</li>
+              <li>Information Assurance and Cybersecurity (INFO 310)</li>
+              <li>Data Science (INFO 201)</li>
+            </ul>
+          </dd>
+        </dl>
       </div>
-    </header>
+    </section>
 
-    <main>
-      <p>
-        I'm studying Informatics with a concentration in data science, and I graduate in summer 2027. I'm working
-        toward product and project management roles. I like finding out how people use a system, where it breaks down,
-        and what a team should build next.
-      </p>
+    <section id="projects">
+      <h2>Projects</h2>
 
-      <h2 id="projects">Projects</h2>
-
-      <section class="project" id="fisheries">
+      <article class="project">
         <h3>Real-Time Fisheries Compliance &amp; Alert System</h3>
-        <img
-          src="images/Fish-proj-wireframe.png"
-          width="1600"
-          height="892"
-          alt="Workflow diagram for the real-time fisheries compliance system"
-        />
-        <h4>Problem</h4>
-        <p>Fishing crews can break regulations by accident and overharvest fish populations without meaning to.</p>
-        <h4>What I did</h4>
-        <p>
-          Researched how vessel operators work and which violations happen most often. Mapped the workflows and
-          fishery-specific edge cases, then wrote them up as clear requirements.
-        </p>
-        <h4>Result</h4>
-        <p>A backlog in Azure DevOps that the team used to guide development, and a design for real-time alerts.</p>
-        <p class="links">
-          <a href="https://dev.azure.com/mbange0367/LYWM/_wiki/wikis/LYWM.wiki/1/Team-Guidelines" target="_blank" rel="noopener noreferrer">Project wiki</a>
-        </p>
-      </section>
+        <p class="tools">Azure DevOps, Miro</p>
+        <img src="images/Fish-proj-wireframe.png" alt="Workflow diagram for the fisheries compliance system" width="1600" height="892" loading="lazy">
+        <dl>
+          <dt>Problem</dt>
+          <dd>Fishing crews can break regulations by accident and overharvest fish populations without meaning to.</dd>
+          <dt>What I did</dt>
+          <dd>Researched how vessel operators work and which violations happen most often. Mapped the workflows and fishery-specific edge cases, then wrote them up as clear requirements.</dd>
+          <dt>Result</dt>
+          <dd>A backlog in Azure DevOps that the team used to guide development, and a design for real-time alerts.</dd>
+        </dl>
+        <p class="links"><a href="https://dev.azure.com/mbange0367/LYWM/_wiki/wikis/LYWM.wiki/1/Team-Guidelines" target="_blank" rel="noopener">Project wiki</a></p>
+      </article>
 
-      <section class="project" id="gallae">
+      <article class="project">
         <h3>Gallae</h3>
-        <img src="images/Gallae.png" width="1920" height="1080" alt="Gallae prototype UI preview" />
-        <h4>Problem</h4>
-        <p>Students need an easier way to discover local music events.</p>
-        <h4>What I did</h4>
-        <p>
-          Researched how students find music events, then designed an interactive Figma prototype that covers the path
-          from discovery to RSVP.
-        </p>
-        <h4>Result</h4>
-        <p>
-          A prototype with event-based communities, badges for language and music taste, and moderation built for
-          safety.
-        </p>
+        <p class="tools">Figma</p>
+        <img src="images/Gallae.png" alt="Screens from the Gallae music event app prototype" width="1920" height="1080" loading="lazy">
+        <dl>
+          <dt>Problem</dt>
+          <dd>Students have a hard time finding local music events, and the current options fall short.</dd>
+          <dt>What I did</dt>
+          <dd>Researched how students find events, mapped the flows for browsing, recommendations, event details, and profiles, and designed a consistent visual system across the screens.</dd>
+          <dt>Result</dt>
+          <dd>An interactive Figma prototype that shows the full experience from discovery to RSVP.</dd>
+        </dl>
         <p class="links">
-          <a href="https://www.figma.com/proto/GNGMiDMHpJ5oYPvr3YZ28P/Design-Space-for-Ewha-x-UW-Hackathon?node-id=204-5406&t=S9YlSDPKHNVmBXmr-1" target="_blank" rel="noopener noreferrer">Prototype</a>
-          <a href="https://www.figma.com/design/GNGMiDMHpJ5oYPvr3YZ28P/Design-Space-for-Ewha-x-UW-Hackathon?node-id=0-1&t=vAwOf0Djzc5362WL-1" target="_blank" rel="noopener noreferrer">Design process</a>
+          <a href="https://www.figma.com/proto/GNGMiDMHpJ5oYPvr3YZ28P/Design-Space-for-Ewha-x-UW-Hackathon?node-id=204-5406&amp;t=S9YlSDPKHNVmBXmr-1" target="_blank" rel="noopener">Prototype</a>
+          <a href="https://www.figma.com/design/GNGMiDMHpJ5oYPvr3YZ28P/Design-Space-for-Ewha-x-UW-Hackathon?node-id=0-1&amp;t=vAwOf0Djzc5362WL-1" target="_blank" rel="noopener">Design process</a>
         </p>
-      </section>
+      </article>
 
-      <section class="project" id="fremont">
-        <h3>Bicycle Traffic Patterns on Seattle's Fremont Bridge</h3>
-        <img
-          src="images/fremont-bike-graph.png"
-          width="1147"
-          height="679"
-          alt="Bar chart of weekday vs. weekend bicycle crossings on the Fremont Bridge by year"
-        />
-        <h4>Problem</h4>
-        <p>Seattle counts bikes on the Fremont Bridge every hour, but the raw counts don't show how riding has changed.</p>
-        <h4>What I did</h4>
-        <p>
-          Analyzed 112,440 hourly bike-count records from 2012 to 2025 in R and split them into weekdays and weekends.
-          I kept working on it after the class ended.
-        </p>
-        <h4>Result</h4>
-        <p>
-          Riding grew through 2019, then dropped sharply in 2020. Weekday totals fell by about 40% while weekend totals
-          held steady.
-        </p>
-        <p class="links">
-          <a href="data/fremont_bike_analysis.html" target="_blank" rel="noopener noreferrer">Read the report</a>
-        </p>
-      </section>
+      <article class="project">
+        <h3>Bicycle Traffic on Seattle's Fremont Bridge</h3>
+        <p class="tools">R, tidyverse, lubridate, ggplot2</p>
+        <img src="images/fremont-bike-graph.png" alt="Bar chart of weekday and weekend bicycle crossings on the Fremont Bridge by year, 2012 to 2025" width="1147" height="679" loading="lazy">
+        <dl>
+          <dt>Question</dt>
+          <dd>How has bike traffic on the bridge changed over time, and how do commuters compare to weekend riders?</dd>
+          <dt>What I did</dt>
+          <dd>Analyzed 112,000+ hourly counts from Seattle Open Data (2012 to 2025) in R, built the charts in ggplot2, and wrote up the data's limitations. I kept working on it after the class ended and turned it into a full report.</dd>
+          <dt>Result</dt>
+          <dd>Crossings grew steadily through 2019, then dropped sharply in 2020. Weekend traffic fell less than weekday traffic, which points to commuting as the main change.</dd>
+        </dl>
+        <p class="links"><a href="data/fremont_bike_analysis.html">Read the report</a></p>
+      </article>
 
-      <section class="project" id="garden">
-        <h3>Seattle Community Garden Connection</h3>
-        <img
-          src="images/save-the-city.png"
-          width="1698"
-          height="1098"
-          alt="Seattle Community Garden Connection website screenshot"
-        />
-        <h4>Problem</h4>
-        <p>Seattle residents need an easy way to find and join local community gardens.</p>
-        <h4>What I did</h4>
-        <p>
-          On a team, researched urban food deserts and barriers to participation, wrote user personas, and ran
-          accessibility-focused research.
-        </p>
-        <h4>Result</h4>
-        <p>A working web platform built around accessibility and clear information architecture.</p>
-        <p class="links">
-          <a href="https://save-the-city-906f2.web.app/" target="_blank" rel="noopener noreferrer">Live site</a>
-          <a href="https://github.com/UW-INFO442-WI26/save-the-city" target="_blank" rel="noopener noreferrer">Repo</a>
-        </p>
-      </section>
+      <h2 class="sub">Other projects</h2>
 
-      <section class="project" id="pixelboard">
-        <h3>PixelBoard</h3>
-        <img src="images/PixelBoard.png" width="1900" height="906" alt="PixelBoard profile page preview" />
-        <h4>Problem</h4>
-        <p>Pixel artists need a place to browse and share their work.</p>
-        <h4>What I did</h4>
-        <p>
-          On a 5-person team, built the profile page (HTML, CSS, React) with customizable, interactive elements, and
-          the site navigation bar.
-        </p>
-        <h4>Result</h4>
-        <p>A community gallery for browsing and sharing pixel art.</p>
-        <p class="links">
-          <a href="https://pixelboard-sp26.web.app/home" target="_blank" rel="noopener noreferrer">Live site</a>
-          <a href="https://github.com/info340-sp26a/project-crystaltran12" target="_blank" rel="noopener noreferrer">Repo</a>
-        </p>
-      </section>
-
-      <section class="project" id="lfd">
-        <h3>Looking For Dawgs</h3>
-        <img
-          src="images/LFD-home.png"
-          width="1717"
-          height="971"
-          alt="Looking For Dawgs home page screenshot"
-        />
-        <h4>Problem</h4>
-        <p>UW students need a way to find study groups and get questions answered.</p>
-        <h4>What I did</h4>
-        <p>Built a React and Firebase study group platform with real-time Q&amp;A and upvotes.</p>
-        <h4>Result</h4>
-        <p>Students can post questions, answer them, and upvote the answers that helped.</p>
-        <p class="links">
-          <a href="https://github.com/Maximoseq/Looking-For-Dawgs" target="_blank" rel="noopener noreferrer">Repo</a>
-        </p>
-      </section>
-
-      <section class="project" id="secondstep">
-        <h3>SecondStep (DubHacks prototype)</h3>
-        <img src="images/Secondstep.png" width="2335" height="1135" alt="SecondStep prototype screen preview" />
-        <h4>Problem</h4>
-        <p>People in crisis can have a hard time finding food, shelter, and legal support.</p>
-        <h4>What I did</h4>
-        <p>
-          Built a prototype at DubHacks, interviewed a law firm volunteer who works with people in crisis, and refined
-          the design based on their feedback.
-        </p>
-        <h4>Result</h4>
-        <p>A prototype designed for low-barrier access to food, shelter, and legal support.</p>
-        <p class="links">
-          <a href="https://github.com/paingkalay7324/dubHacks25" target="_blank" rel="noopener noreferrer">Repo</a>
-          <a href="https://devpost.com/software/map-based-selling-app" target="_blank" rel="noopener noreferrer">Devpost</a>
-        </p>
-      </section>
-
-      <p>Next up: more analysis reports in Python and pandas.</p>
-
-      <h2 id="skills">Skills</h2>
-      <dl>
+      <article class="small">
+        <img src="images/save-the-city.png" alt="Seattle Community Garden Connection home page" width="1698" height="1098" loading="lazy">
         <div>
-          <dt>Programming</dt>
-          <dd>R (tidyverse, lubridate, ggplot2, Shiny), SQL, Python, Git/GitHub, HTML, CSS, JSX, React</dd>
+          <h3>Seattle Community Garden Connection</h3>
+          <p>A team-built site that connects Seattle residents to local community gardens, with a focus on accessibility and clear information architecture.</p>
+          <p class="links">
+            <a href="https://save-the-city-906f2.web.app/" target="_blank" rel="noopener">Live site</a>
+            <a href="https://github.com/UW-INFO442-WI26/save-the-city" target="_blank" rel="noopener">Code</a>
+          </p>
         </div>
+      </article>
+
+      <article class="small">
+        <img src="images/PixelBoard.png" alt="PixelBoard profile page" width="1900" height="906" loading="lazy">
         <div>
-          <dt>Data &amp; Analytics</dt>
-          <dd>Statistical Modeling, Data Cleaning &amp; QC, Data Visualization, Matplotlib, Excel, Data Analysis</dd>
+          <h3>PixelBoard</h3>
+          <p>A community gallery for sharing pixel art, built with a team of five. I built the customizable profile page in React and the site's navigation bar.</p>
+          <p class="links">
+            <a href="https://pixelboard-sp26.web.app/home" target="_blank" rel="noopener">Live site</a>
+            <a href="https://github.com/info340-sp26a/project-crystaltran12" target="_blank" rel="noopener">Code</a>
+          </p>
         </div>
+      </article>
+
+      <article class="small">
+        <img src="images/LFD-home.png" alt="Looking For Dawgs home page" width="1717" height="971" loading="lazy">
         <div>
-          <dt>Design &amp; PM</dt>
-          <dd>Figma, Azure DevOps, Miro, Wireframing, UX/UI Design, User Research, Prototyping</dd>
+          <h3>Looking For Dawgs</h3>
+          <p>A study group site for UW students, built with React and Firebase. Students can post questions, answer them, and upvote the best answers in real time.</p>
+          <p class="links"><a href="https://github.com/Maximoseq/Looking-For-Dawgs" target="_blank" rel="noopener">Code</a></p>
         </div>
+      </article>
+
+      <article class="small">
+        <img src="images/Secondstep.png" alt="SecondStep prototype screen" width="2335" height="1135" loading="lazy">
         <div>
-          <dt>Other</dt>
-          <dd>Fluent in Spanish, Public Speaking, Team Collaboration</dd>
+          <h3>SecondStep</h3>
+          <p>A DubHacks prototype that helps people find food, shelter, and legal support nearby. I interviewed a volunteer who connects domestic violence survivors with pro bono lawyers, and it showed how many people don't know these resources exist.</p>
+          <p class="links">
+            <a href="https://devpost.com/software/map-based-selling-app" target="_blank" rel="noopener">Devpost</a>
+            <a href="https://github.com/paingkalay7324/dubHacks25" target="_blank" rel="noopener">Code</a>
+          </p>
         </div>
+      </article>
+    </section>
+
+    <section id="experience">
+      <h2>Leadership &amp; Club Involvement</h2>
+
+      <article class="role">
+        <h3>Up and Up Washington</h3>
+        <p class="meta">Lead Ambassador, July 2026 to present</p>
+        <ul>
+          <li>Led a team of ambassadors and ran our social media campaign.</li>
+          <li>Grew the Instagram account from about 700 to more than 200,000 monthly viewers and gained around 300 followers.</li>
+          <li>Set up partnerships with local venues for giveaways and campus marketing.</li>
+          <li>Helped UW reach the top 25 schools in presales.</li>
+        </ul>
+      </article>
+
+      <article class="role">
+        <h3>UW DJ Club</h3>
+        <p class="meta">Public Relations and Social Media, Sept 2025 to present</p>
+        <ul>
+          <li>Run the club's social media.</li>
+          <li>Lined up sponsorships with Celsius and LEVEL1.</li>
+          <li>Our marketing helped bring in $1,000+ in event sales.</li>
+        </ul>
+      </article>
+
+      <article class="role">
+        <h3>Zeta Psi</h3>
+        <p class="meta">Public Relations and Outreach Chair, Dec 2023 to Sept 2024</p>
+        <ul>
+          <li>Led public relations and social media.</li>
+          <li>Secured sponsorships from local businesses in exchange for promoting their events.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <dl class="skills">
+        <dt>Programming</dt>
+        <dd>R (tidyverse, lubridate, ggplot2, Shiny), SQL, Python, PHP, Git/GitHub, HTML, CSS, JSX, React</dd>
+        <dt>Data and analytics</dt>
+        <dd>Statistical modeling, data cleaning and QC, data visualization, Matplotlib, Excel, data analysis</dd>
+        <dt>Security</dt>
+        <dd>Docker, risk analysis, finding and fixing vulnerabilities, threat assessment, information privacy and policy</dd>
+        <dt>Design and PM</dt>
+        <dd>Figma, Azure DevOps, Miro, wireframing, UX/UI design, user research, prototyping</dd>
+        <dt>Other</dt>
+        <dd>Fluent in Spanish, public speaking, team collaboration, social media management</dd>
       </dl>
+    </section>
 
-      <h2 id="about">About</h2>
+    <section id="about">
+      <h2>About</h2>
+      <div class="about">
+        <img class="aboutphoto" src="images/max-about.jpg" alt="Max smiling at the Namsan Observatory overlook in Seoul at night" width="900" height="1200" loading="lazy">
+        <div>
+          <p>Outside of school and tech, I'm usually hiking, skiing, DJing, or out with a camera. Being outdoors is where a lot of my inspiration comes from.</p>
+          <p>Music is really special to me. It's what gets me thinking creatively, and I do my best work with something good playing.</p>
+          <div>
+            <p><b>A few fun facts</b></p>
+            <ul class="facts-list">
+              <li>I'm fluent in Spanish.</li>
+              <li>I've opened for one of my favorite artists.</li>
+              <li>This photo is from the Namsan overlook in Seoul.</li>
+              <li>There's always music on when I'm working.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="outside">
+        <figure>
+          <img src="images/hobby-hiking.jpg" alt="Max standing on a rock outcrop at the top of Mount Pilchuck" width="800" height="800" loading="lazy">
+          <figcaption><b>Hiking</b><span class="gray">The top of Mount Pilchuck.</span></figcaption>
+        </figure>
+        <figure>
+          <img src="images/hobby-dj.jpg" alt="Max DJing on a rooftop with the New York City skyline behind him" width="800" height="800" loading="lazy">
+          <figcaption><b>DJing</b><span class="gray">A rooftop set in New York.</span></figcaption>
+        </figure>
+        <figure>
+          <img src="images/hobby-waterskiing.jpg" alt="Max waterskiing on the Columbia River below brown hills" width="800" height="800" loading="lazy">
+          <figcaption><b>Waterskiing</b><span class="gray">On the Columbia River.</span></figcaption>
+        </figure>
+        <figure>
+          <img src="images/hobby-photography.jpg" alt="Two mountain goats on a grassy ridge in the North Cascades with snowy peaks behind them" width="800" height="800" loading="lazy">
+          <figcaption><b>Photography</b><span class="gray">Mountain goats in the North Cascades.</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="listening">
+        <h3>What I've been listening to</h3>
+        <ul class="tracks">
+          <li>
+            <iframe title="I Wait (Mall Grab Remix) by Ron Blanco on SoundCloud" loading="lazy" allow="autoplay" scrolling="no"
+              src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/rhythm-nation-records/ron-blanco-i-wait-mall-grab-remixout-now&amp;color=%230b4f9e&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_reposts=false&amp;show_teaser=false"></iframe>
+          </li>
+          <li>
+            <iframe title="No More by Sam Alfred on SoundCloud" loading="lazy" allow="autoplay" scrolling="no"
+              src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/samalfred567/no-more&amp;color=%230b4f9e&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_reposts=false&amp;show_teaser=false"></iframe>
+          </li>
+          <li>
+            <iframe title="Get a Grip (Asa Tate Remix) on SoundCloud" loading="lazy" allow="autoplay" scrolling="no"
+              src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/dfa-records/get-a-grip-asa-tate-remix-5&amp;color=%230b4f9e&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_reposts=false&amp;show_teaser=false"></iframe>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
       <p>
-        I'm in the Informatics program at the University of Washington Information School. I use R for most of my
-        analysis and visualization, and I'm picking up more Python in my coursework. Outside of class, I like poking
-        around in music data.
+        The best way to reach me is at <a href="mailto:mbange@uw.edu">mbange@uw.edu</a>. I'm also on
+        <a href="https://www.linkedin.com/in/mbange3/" target="_blank" rel="noopener">LinkedIn</a> and
+        <a href="https://github.com/Maximoseq" target="_blank" rel="noopener">GitHub</a>.
       </p>
+    </section>
+  </main>
 
-      <h2 id="contact">Contact</h2>
-      <p>
-        <a href="mailto:mbange@uw.edu">mbange@uw.edu</a><br />
-        <a href="https://github.com/Maximoseq" target="_blank" rel="noopener noreferrer">GitHub</a> ·
-        <a href="https://www.linkedin.com/in/mbange3/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      </p>
-    </main>
-
-    <footer>© 2026 Max Bange</footer>
+  <footer><p>Last updated November 2026</p></footer>
+</div>
   </body>
 </html>
