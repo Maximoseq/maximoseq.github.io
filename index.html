@@ -9,7 +9,9 @@
     <link rel="icon" type="image/png" href="favicon-32.png" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     <link rel="preload" href="fonts/libre-franklin.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="style.css" />
+    <script>document.documentElement.className += " js";</script>
+    <link rel="stylesheet" href="style.css?v=8" />
+    <script src="script.js?v=8" defer></script>
   </head>
   <body>
 <div class="wrap">
@@ -57,102 +59,231 @@
           </dd>
         </dl>
       </div>
+        <div class="school program">
+          <h3>Global Career Accelerator</h3>
+          <p class="meta">SQL and data analysis program, fall 2026</p>
+          <p>Wrote SQL queries in SQLPad to analyze business datasets, including YouTube trending videos, startup investments, London transit, NBA performance, and restaurant customer data.</p>
+        </div>
     </section>
 
     <section id="projects">
       <h2>Projects</h2>
 
-      <article class="project">
-        <h3>Real-Time Fisheries Compliance &amp; Alert System</h3>
-        <p class="tools">Azure DevOps, Miro</p>
-        <img src="images/Fish-proj-wireframe.png" alt="Workflow diagram for the fisheries compliance system" width="1600" height="892" loading="lazy">
-        <dl>
-          <dt>Problem</dt>
-          <dd>Fishing crews can break regulations by accident and overharvest fish populations without meaning to.</dd>
-          <dt>What I did</dt>
-          <dd>Researched how vessel operators work and which violations happen most often. Mapped the workflows and fishery-specific edge cases, then wrote them up as clear requirements.</dd>
-          <dt>Result</dt>
-          <dd>A backlog in Azure DevOps that the team used to guide development, and a design for real-time alerts.</dd>
-        </dl>
-        <p class="links"><a href="https://dev.azure.com/mbange0367/LYWM/_wiki/wikis/LYWM.wiki/1/Team-Guidelines" target="_blank" rel="noopener">Project wiki</a></p>
-      </article>
+      <div class="filters" role="group" aria-label="Filter projects">
+        <button type="button" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" data-filter="design" aria-pressed="false">Design and PM</button>
+        <button type="button" data-filter="data" aria-pressed="false">Data and analytics</button>
+        <button type="button" data-filter="security" aria-pressed="false">Security</button>
+        <button type="button" data-filter="web" aria-pressed="false">Web development</button>
+      </div>
+      <p class="filter-status" id="filter-status" aria-live="polite"></p>
 
-      <article class="project">
-        <h3>Gallae</h3>
-        <p class="tools">Figma</p>
-        <img src="images/Gallae.png" alt="Screens from the Gallae music event app prototype" width="1920" height="1080" loading="lazy">
+      <article class="project" data-cats="design">
+        <img src="images/spotify-redesign-profile.jpg" alt="Three wireframes of a redesigned Spotify profile: editing a bio, a confirmation message, and the finished profile" width="1600" height="775" loading="lazy">
+        <h3>Spotify Social Redesign</h3>
+        <p class="tools">Figma, information architecture, taxonomy</p>
+        <p>A concept redesign that makes Spotify's social features easier to find and use.</p>
         <dl>
           <dt>Problem</dt>
-          <dd>Students have a hard time finding local music events, and the current options fall short.</dd>
+          <dd>Spotify's social features are hard to find, so listeners leave the app to share music, often through Instagram.</dd>
           <dt>What I did</dt>
-          <dd>Researched how students find events, mapped the flows for browsing, recommendations, event details, and profiles, and designed a consistent visual system across the screens.</dd>
+          <dd>I was the UX designer and taxonomist on a four-person team. I designed the wireframes, including a more customizable profile and in-app messaging where shared songs can be played or saved right from the chat. I also built the taxonomy and metadata tags that organize Spotify's content, listeners, creators, social activity, and discovery features.</dd>
           <dt>Result</dt>
-          <dd>An interactive Figma prototype that shows the full experience from discovery to RSVP.</dd>
+          <dd>Over nine weeks, our team delivered a business case, project plan, personas, a new sitemap, the taxonomy, and wireframes for a more social Spotify.</dd>
         </dl>
+        <p class="note">Unofficial concept redesign for INFO 331, fall 2025. Not affiliated with Spotify.</p>
         <p class="links">
-          <a href="https://www.figma.com/proto/GNGMiDMHpJ5oYPvr3YZ28P/Design-Space-for-Ewha-x-UW-Hackathon?node-id=204-5406&amp;t=S9YlSDPKHNVmBXmr-1" target="_blank" rel="noopener">Prototype</a>
-          <a href="https://www.figma.com/design/GNGMiDMHpJ5oYPvr3YZ28P/Design-Space-for-Ewha-x-UW-Hackathon?node-id=0-1&amp;t=vAwOf0Djzc5362WL-1" target="_blank" rel="noopener">Design process</a>
+          <a href="docs/spotify-social-redesign.pdf">Slides (PDF)</a>
+          <a href="https://www.figma.com/design/vlq5eiBALBPQUsq4J2PSfB/Wireframes?node-id=120-3383">Wireframes</a>
         </p>
       </article>
 
-      <article class="project">
-        <h3>Bicycle Traffic on Seattle's Fremont Bridge</h3>
-        <p class="tools">R, tidyverse, lubridate, ggplot2</p>
-        <img src="images/fremont-bike-graph.png" alt="Bar chart of weekday and weekend bicycle crossings on the Fremont Bridge by year, 2012 to 2025" width="1147" height="679" loading="lazy">
+      <article class="project" data-cats="security">
+        <img src="images/husky-manager-login.jpg" alt="Husky Manager login page showing a limit of 10 login attempts with a 10-minute timeout" width="880" height="618" loading="lazy">
+        <h3>Husky Manager Security Review</h3>
+        <p class="tools">PHP, MySQL, Docker, Nginx</p>
+        <p>A team security review of a deliberately insecure password manager.</p>
         <dl>
-          <dt>Question</dt>
-          <dd>How has bike traffic on the bridge changed over time, and how do commuters compare to weekend riders?</dd>
+          <dt>Problem</dt>
+          <dd>The password manager had no input validation, used plain HTTP, and had hard-coded passwords.</dd>
           <dt>What I did</dt>
-          <dd>Analyzed 112,000+ hourly counts from Seattle Open Data (2012 to 2025) in R, built the charts in ggplot2, and wrote up the data's limitations. I kept working on it after the class ended and turned it into a full report.</dd>
+          <dd>I researched and presented the authentication, authorization, and hardening sections of our final presentation. That covered how PHP sessions and role-based access work, and how the team fixed sessions that never expired, vault pages anyone could open without logging in, and file uploads that accepted any file type. I also helped with the PHP changes.</dd>
           <dt>Result</dt>
-          <dd>Crossings grew steadily through 2019, then dropped sharply in 2020. Weekend traffic fell less than weekday traffic, which points to commuting as the main change.</dd>
+          <dd>Our team tested and fixed SQL injection, cross-site scripting, the session and upload problems, and unlimited login attempts. Login is now limited to 10 attempts, followed by a 10-minute lockout.</dd>
         </dl>
-        <p class="links"><a href="data/fremont_bike_analysis.html">Read the report</a></p>
+        <p class="links"><a href="docs/husky-manager-security-review.pdf">Slides (PDF)</a></p>
       </article>
 
-      <h2 class="sub">Other projects</h2>
-
-      <article class="small">
-        <img src="images/save-the-city.png" alt="Seattle Community Garden Connection home page" width="1698" height="1098" loading="lazy">
-        <div>
-          <h3>Seattle Community Garden Connection</h3>
-          <p>A team-built site that connects Seattle residents to local community gardens, with a focus on accessibility and clear information architecture.</p>
-          <p class="links">
-            <a href="https://save-the-city-906f2.web.app/" target="_blank" rel="noopener">Live site</a>
-            <a href="https://github.com/UW-INFO442-WI26/save-the-city" target="_blank" rel="noopener">Code</a>
-          </p>
-        </div>
-      </article>
-
-      <article class="small">
+      <article class="project" data-cats="web">
         <img src="images/PixelBoard.png" alt="PixelBoard profile page" width="1900" height="906" loading="lazy">
+        <h3>PixelBoard</h3>
+        <p class="tools">React, JSX, HTML, CSS</p>
+        <p>A community gallery for sharing pixel art, built with a five-person team.</p>
+        <dl>
+          <dt>Problem</dt>
+          <dd>Pixel artists need a simple place to share their work and browse what others make.</dd>
+          <dt>What I did</dt>
+          <dd>On a five-person team, I built the profile page in React, HTML, and CSS, with customizable, interactive elements, and built the site's navigation bar.</dd>
+          <dt>Result</dt>
+          <dd>A live community gallery where people can browse and share pixel art.</dd>
+        </dl>
+        <p class="links">
+          <a href="https://pixelboard-sp26.web.app/home" target="_blank" rel="noopener">Live site</a>
+          <a href="https://github.com/info340-sp26a/project-crystaltran12" target="_blank" rel="noopener">Code</a>
+        </p>
+      </article>
+
+      <h2 class="sub" id="other-title">Other projects</h2>
+
+      <article class="small" data-cats="data">
+        <img src="images/fremont-bike-graph.png" alt="Bar chart of weekday and weekend bicycle crossings on the Fremont Bridge by year, 2012 to 2025" width="1147" height="679" loading="lazy">
         <div>
-          <h3>PixelBoard</h3>
-          <p>A community gallery for sharing pixel art, built with a team of five. I built the customizable profile page in React and the site's navigation bar.</p>
+          <h3>Bicycle Traffic on Seattle's Fremont Bridge</h3>
+          <p class="tools">R, tidyverse, lubridate, ggplot2</p>
+          <p>An R analysis of hourly bike counts on the Fremont Bridge from 2012 to 2025.</p>
+          <details>
+            <summary>More info</summary>
+            <dl>
+              <dt>Question</dt>
+              <dd>How has bike traffic on the bridge changed over time, and how do commuters compare to weekend riders?</dd>
+              <dt>What I did</dt>
+              <dd>Analyzed 112,000+ hourly counts from Seattle Open Data (2012 to 2025) in R, built the charts in ggplot2, and wrote up the data's limitations. I kept working on it after the class ended and turned it into a full report.</dd>
+              <dt>Result</dt>
+              <dd>Crossings grew steadily through 2019, then dropped sharply in 2020. Weekend traffic fell less than weekday traffic, which points to commuting as the main change.</dd>
+            </dl>
+          </details>
+          <p class="links"><a href="data/fremont_bike_analysis.html">Read the report</a></p>
+        </div>
+      </article>
+
+      <article class="small" data-cats="data">
+        <img src="images/intel-repurposing-project.jpg" alt="Global Career Accelerator project handout titled Sustainability Impact Analysis for Intel" width="811" height="436" loading="lazy">
+        <div>
+          <h3>Device Repurposing Analysis for Intel</h3>
+          <p class="tools">SQL (joins, CTEs, CASE, aggregation), SQLPad</p>
+          <p>A Global Career Accelerator case project using a simulated dataset modeled on Intel's device repurposing program.</p>
+          <details>
+            <summary>More info</summary>
+            <dl>
+              <dt>Problem</dt>
+              <dd>Intel wanted to know which repurposed devices to prioritize for the biggest drop in energy use and CO₂ emissions.</dd>
+              <dt>What I did</dt>
+              <dd>Joined device and impact data for about 600,000 laptops and desktops in SQL, then grouped devices by age, type, and region using CASE and CTEs.</dd>
+              <dt>Result</dt>
+              <dd>Older devices saved about 48 kWh a year each, compared with about 19 kWh for newer ones, but made up only about 3% of the program. Devices in Asia saved the most CO₂, about 15.5 kg each, compared with 6.4 kg in Europe. I recommended a trade-in program to bring in more older devices, starting in Asia.</dd>
+            </dl>
+          </details>
+          <p class="links"><a href="docs/intel-device-repurposing-analysis.pdf">Full analysis (PDF)</a></p>
+        </div>
+      </article>
+
+      <article class="small" data-cats="design">
+        <img src="images/Fish-proj-wireframe.png" alt="Workflow diagram for the fisheries compliance system" width="1600" height="892" loading="lazy">
+        <div>
+          <h3>Real-Time Fisheries Compliance &amp; Alert System</h3>
+          <p class="tools">Azure DevOps, Miro</p>
+          <p>Requirements and a development backlog for a system that warns fishing crews before they break regulations.</p>
+          <details>
+            <summary>More info</summary>
+            <dl>
+              <dt>Problem</dt>
+              <dd>Fishing crews can break regulations by accident and overharvest fish populations without meaning to.</dd>
+              <dt>What I did</dt>
+              <dd>Researched how vessel operators work and which violations happen most often. Mapped the workflows and fishery-specific edge cases, then wrote them up as clear requirements.</dd>
+              <dt>Result</dt>
+              <dd>A backlog in Azure DevOps that the team used to guide development, and a design for real-time alerts.</dd>
+            </dl>
+          </details>
+          <p class="links"><a href="https://dev.azure.com/mbange0367/LYWM/_wiki/wikis/LYWM.wiki/1/Team-Guidelines" target="_blank" rel="noopener">Project wiki</a></p>
+        </div>
+      </article>
+
+      <article class="small" data-cats="design">
+        <img src="images/Gallae.png" alt="Screens from the Gallae music event app prototype" width="1920" height="1080" loading="lazy">
+        <div>
+          <h3>Gallae</h3>
+          <p class="tools">Figma</p>
+          <p>A mobile app prototype that helps students find local music events.</p>
+          <details>
+            <summary>More info</summary>
+            <dl>
+              <dt>Problem</dt>
+              <dd>Students have a hard time finding local music events, and the current options fall short.</dd>
+              <dt>What I did</dt>
+              <dd>Researched how students find events, mapped the flows for browsing, recommendations, event details, and profiles, and designed a consistent visual system across the screens.</dd>
+              <dt>Result</dt>
+              <dd>An interactive Figma prototype that shows the full experience from discovery to RSVP.</dd>
+            </dl>
+          </details>
           <p class="links">
-            <a href="https://pixelboard-sp26.web.app/home" target="_blank" rel="noopener">Live site</a>
-            <a href="https://github.com/info340-sp26a/project-crystaltran12" target="_blank" rel="noopener">Code</a>
+            <a href="https://www.figma.com/proto/GNGMiDMHpJ5oYPvr3YZ28P/Design-Space-for-Ewha-x-UW-Hackathon?node-id=204-5406&amp;t=S9YlSDPKHNVmBXmr-1" target="_blank" rel="noopener">Prototype</a>
+            <a href="https://www.figma.com/design/GNGMiDMHpJ5oYPvr3YZ28P/Design-Space-for-Ewha-x-UW-Hackathon?node-id=0-1&amp;t=vAwOf0Djzc5362WL-1" target="_blank" rel="noopener">Design process</a>
           </p>
         </div>
       </article>
 
-      <article class="small">
+      <article class="small" data-cats="design">
+        <img src="images/Secondstep.png" alt="SecondStep prototype screen" width="2335" height="1135" loading="lazy">
+        <div>
+          <h3>SecondStep</h3>
+          <p>A DubHacks prototype that helps people find food, shelter, and legal support nearby.</p>
+          <details>
+            <summary>More info</summary>
+            <dl>
+              <dt>Problem</dt>
+              <dd>Many people in crisis don't know where to find food, shelter, or legal help, or that these resources exist at all.</dd>
+              <dt>What I did</dt>
+              <dd>Interviewed a volunteer who connects domestic violence survivors with pro bono lawyers, and used what I learned to push the design toward simple, visual, low-barrier steps.</dd>
+              <dt>Result</dt>
+              <dd>A hackathon prototype that shows nearby food, shelter, and legal resources in one place.</dd>
+            </dl>
+          </details>
+          <p class="links">
+            <a href="https://devpost.com/software/map-based-selling-app" target="_blank" rel="noopener">Devpost</a>
+            <a href="https://github.com/paingkalay7324/dubHacks25" target="_blank" rel="noopener">Code</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="small" data-cats="web">
         <img src="images/LFD-home.png" alt="Looking For Dawgs home page" width="1717" height="971" loading="lazy">
         <div>
           <h3>Looking For Dawgs</h3>
-          <p>A study group site for UW students, built with React and Firebase. Students can post questions, answer them, and upvote the best answers in real time.</p>
+          <p>A study group site for UW students with real-time questions, answers, and upvotes.</p>
+          <details>
+            <summary>More info</summary>
+            <dl>
+              <dt>Problem</dt>
+              <dd>UW students need an easier way to find study groups and get help from classmates.</dd>
+              <dt>What I did</dt>
+              <dd>Built the site with React, JSX, HTML, and CSS, and used Firebase so questions, answers, and upvotes update in real time.</dd>
+              <dt>Result</dt>
+              <dd>A working study group site where students can post questions, answer them, and upvote the best answers.</dd>
+            </dl>
+          </details>
           <p class="links"><a href="https://github.com/Maximoseq/Looking-For-Dawgs" target="_blank" rel="noopener">Code</a></p>
         </div>
       </article>
 
-      <article class="small">
-        <img src="images/Secondstep.png" alt="SecondStep prototype screen" width="2335" height="1135" loading="lazy">
+      <article class="small" data-cats="design web">
+        <img src="images/save-the-city.png" alt="Seattle Community Garden Connection home page" width="1698" height="1098" loading="lazy">
         <div>
-          <h3>SecondStep</h3>
-          <p>A DubHacks prototype that helps people find food, shelter, and legal support nearby. I interviewed a volunteer who connects domestic violence survivors with pro bono lawyers, and it showed how many people don't know these resources exist.</p>
+          <h3>Seattle Community Garden Connection</h3>
+          <p>A site that connects Seattle residents to local community gardens.</p>
+          <details>
+            <summary>More info</summary>
+            <dl>
+              <dt>Problem</dt>
+              <dd>Seattle residents who want to garden have a hard time finding local community gardens and how to get involved.</dd>
+              <dt>What I did</dt>
+              <dd>Worked on a team site focused on accessibility and clear information architecture.</dd>
+              <dt>Result</dt>
+              <dd>A live site that connects residents to community gardens across Seattle.</dd>
+            </dl>
+          </details>
           <p class="links">
-            <a href="https://devpost.com/software/map-based-selling-app" target="_blank" rel="noopener">Devpost</a>
-            <a href="https://github.com/paingkalay7324/dubHacks25" target="_blank" rel="noopener">Code</a>
+            <a href="https://save-the-city-906f2.web.app/" target="_blank" rel="noopener">Live site</a>
+            <a href="https://github.com/UW-INFO442-WI26/save-the-city" target="_blank" rel="noopener">Code</a>
           </p>
         </div>
       </article>
@@ -194,18 +325,77 @@
 
     <section id="skills">
       <h2>Skills</h2>
-      <dl class="skills">
-        <dt>Programming</dt>
-        <dd>R (tidyverse, lubridate, ggplot2, Shiny), SQL, Python, PHP, Git/GitHub, HTML, CSS, JSX, React</dd>
-        <dt>Data and analytics</dt>
-        <dd>Statistical modeling, data cleaning and QC, data visualization, Matplotlib, Excel, data analysis</dd>
-        <dt>Security</dt>
-        <dd>Docker, risk analysis, finding and fixing vulnerabilities, threat assessment, information privacy and policy</dd>
-        <dt>Design and PM</dt>
-        <dd>Figma, Azure DevOps, Miro, wireframing, UX/UI design, user research, prototyping</dd>
-        <dt>Other</dt>
-        <dd>Fluent in Spanish, public speaking, team collaboration, social media management</dd>
-      </dl>
+        <dl class="skills">
+          <dt>Programming</dt>
+          <dd>
+            <ul>
+              <li>R (tidyverse, lubridate, ggplot2, Shiny)</li>
+              <li>SQL</li>
+              <li>Python</li>
+              <li>PHP</li>
+              <li>Git/GitHub</li>
+              <li>HTML and CSS</li>
+              <li>JSX and React</li>
+            </ul>
+          </dd>
+          <dt>Data and analytics</dt>
+          <dd>
+            <ul>
+              <li>Data analysis</li>
+              <li>Data cleaning and QC</li>
+              <li>Data visualization</li>
+              <li>Statistical modeling</li>
+              <li>Matplotlib</li>
+              <li>Excel</li>
+            </ul>
+          </dd>
+          <dt>Security</dt>
+          <dd>
+            <ul>
+              <li>Docker, MySQL, and Nginx</li>
+              <li>OWASP Top 10, SQL injection, and XSS</li>
+              <li>Secure coding (prepared statements, input validation)</li>
+              <li>Authentication, sessions, and access control</li>
+              <li>Applied cryptography and HTTPS/TLS</li>
+              <li>Network analysis with Wireshark</li>
+              <li>Man-in-the-middle testing</li>
+              <li>Logging and monitoring (Loggly)</li>
+              <li>Hardening and vulnerability remediation</li>
+              <li>Bug bounty and security testing</li>
+            </ul>
+          </dd>
+          <dt>Design and PM</dt>
+          <dd>
+            <ul>
+              <li>Figma</li>
+              <li>Miro</li>
+              <li>Azure DevOps</li>
+              <li>User research</li>
+              <li>Wireframing</li>
+              <li>Prototyping</li>
+              <li>UX/UI design</li>
+              <li>Information architecture</li>
+              <li>Taxonomy and metadata</li>
+              <li>Card sorting and tree testing</li>
+              <li>Accessibility</li>
+            </ul>
+          </dd>
+          <dt>Languages</dt>
+          <dd>
+            <ul>
+              <li>English</li>
+              <li>Spanish (fluent)</li>
+            </ul>
+          </dd>
+          <dt>Communication</dt>
+          <dd>
+            <ul>
+              <li>Public speaking</li>
+              <li>Team collaboration</li>
+              <li>Social media management</li>
+            </ul>
+          </dd>
+        </dl>
     </section>
 
     <section id="about">
@@ -218,7 +408,6 @@
           <div>
             <p><b>A few fun facts</b></p>
             <ul class="facts-list">
-              <li>I'm fluent in Spanish.</li>
               <li>I've opened for one of my favorite artists.</li>
               <li>This photo is from the Namsan overlook in Seoul.</li>
               <li>There's always music on when I'm working.</li>
